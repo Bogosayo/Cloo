@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.cloo.app.SelectPlayers"
+    android:background="#31a4a0">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusableInTouchMode="false"
+        android:visibility="gone"
+        android:id="@+id/PlayerOptionsOld">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Active Player?"
+            android:id="@+id/isActiveTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isActiveCheckBox"
+            android:layout_alignBottom="@+id/isActiveTextView"
+            android:layout_toRightOf="@+id/isActiveTextView"
+            android:clickable="true"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Human Player?"
+            android:id="@+id/isHumanTextView"
+            android:layout_below="@+id/isActiveTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isHumanCheckBox"
+            android:layout_alignTop="@+id/isHumanTextView"
+            android:layout_toRightOf="@+id/isHumanTextView"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/NumPlayersLayout"
+        android:visibility="visible">
+        //android:
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/twoPlayerButton"
+                android:onClick="selectNumPlayers"
+                android:tag="2"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/ThreePlayerButton"
+                android:layout_column="1"
+                android:onClick="selectNumPlayers"
+                android:tag="3"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:layout_column="3"
+                android:id="@+id/fourPlayerButton"
+                android:onClick="selectNumPlayers"
+                android:tag="4" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_column="0"
+                android:id="@+id/fivePlayerButton"
+                android:onClick="selectNumPlayers"
+                android:tag="5"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/sixPlayerButton"
+                android:layout_column="1"
+                android:onClick="selectNumPlayers"
+                android:tag="6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numPlayersHelpButton"
+                android:layout_column="3"
+                android:background="@android:drawable/ic_menu_help"
+                android:onClick="explainNumbers" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/PlayerOptions"
+        android:visibility="gone">
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/humanitySwitch"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textOff="Comp"
+            android:textOn="Human"
+            android:onClick="humanitySwitchJobs"
+            android:clickable="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/humanityInfoButton"
+            android:layout_alignTop="@+id/humanitySwitch"
+            android:layout_toRightOf="@+id/humanitySwitch"
+            android:background="@android:drawable/ic_menu_help"
+            android:onClick="explainHumanity"
+            android:clickable="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/characterSelectSpinner"
+            android:clickable="true"
+            android:layout_below="@+id/humanityInfoButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/characterSelectInfoButton"
+            android:background="@android:drawable/ic_menu_help"
+            android:onClick="explainCharacterSelect"
+            android:layout_alignBottom="@+id/characterSelectSpinner"
+            android:layout_toRightOf="@+id/humanitySwitch"
+            android:clickable="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

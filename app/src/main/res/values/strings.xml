@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cloo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_test_activity1">TestActivity1</string>
+    <string name="title_activity_select_players">SelectPlayers</string>
+
+    <string-array name="character_names_array">
+        <item>-- --</item>
+        <item>Joey</item>
+        <item>Amy</item>
+        <item>Ashley</item>
+        <item>Jay</item>
+        <item>Panda</item>
+        <item>Obama</item>
+    </string-array>
+
+    <string-array name="suspects1_array">
+        <item>Joey</item>
+        <item>Amy</item>
+        <item>Ashley</item>
+        <item>Jay</item>
+        <item>Panda</item>
+        <item>Obama</item>
+    </string-array>
+
+    <string-array name="weapons1_array">
+        <item>Ketchup</item>
+        <item>Curry</item>
+        <item>Sriracha</item>
+        <item>Worcestershire</item>
+        <item>Shoyu</item>
+        <item>Strawberry Milk</item>
+    </string-array>
+
+    <string-array name="places1_array">
+        <item>Desk</item>
+        <item>Chair</item>
+        <item>Cabinet</item>
+        <item>Refrigerator</item>
+        <item>Futon</item>
+        <item>Ottoman</item>
+        <item>Shelf</item>
+        <item>Wine Rack</item>
+        <item>Cellarette</item>
+    </string-array>
+
+    <string-array name="players0">
+
+    </string-array>
+
+    <string-array name="players2">
+        <item># Select</item>
+        <item>Player 1</item>
+        <item>Player 2</item>
+    </string-array>
+
+    <string-array name="players3">
+        <item># Select</item>
+        <item>Player 1</item>
+        <item>Player 2</item>
+        <item>Player 3</item>
+    </string-array>
+
+    <string-array name="players4">
+        <item># Select</item>
+        <item>Player 1</item>
+        <item>Player 2</item>
+        <item>Player 3</item>
+        <item>Player 4</item>
+    </string-array>
+
+    <string-array name="players5">
+        <item># Select</item>
+        <item>Player 1</item>
+        <item>Player 2</item>
+        <item>Player 3</item>
+        <item>Player 4</item>
+        <item>Player 5</item>
+    </string-array>
+
+    <string-array name="players6">
+        <item># Select</item>
+        <item>Player 1</item>
+        <item>Player 2</item>
+        <item>Player 3</item>
+        <item>Player 4</item>
+        <item>Player 5</item>
+        <item>Player 6</item>
+    </string-array>
+</resources>
